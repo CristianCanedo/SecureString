@@ -88,7 +88,7 @@ namespace SecureStringProgram
                 WriteLine("\nPasswords do not match.");
             }
             else{
-                WriteLine("\n Passwords match!");
+                WriteLine("\nPasswords match!");
             }
         }
     }
