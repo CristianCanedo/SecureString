@@ -9,8 +9,8 @@ namespace SecureStringProgram
     {
         static void Main(string[] args)
         {
-            // Creating two secure strings in order to 
-            // compare typed in passwords
+            // Creating two SecureString objects
+            // in order to compare typed in passwords
             SecureString pwd = new SecureString();
             SecureString pwd2 = new SecureString();
             ConsoleKeyInfo cki;
@@ -80,15 +80,19 @@ namespace SecureStringProgram
         }
 
         static void CheckPasswords(SecureString s1, SecureString s2){
-            if (s1.Length < 0 || s2.Length < 0){
-                WriteLine("\nPasswords must be longer than 6 characters.");
-            }
 
-            if (s1.ToString() != s2.ToString()){            // Convert ToString temporarily to compare
+            if (s1.Length <= 0 && s2.Length <= 0){
+                WriteLine("\nNo passwords entered.");
+            }
+            
+            int s1Hash = s1.GetHashCode();
+            int s2Hash = s2.GetHashCode();
+
+            if (s1Hash != s2Hash){
                 WriteLine("\nPasswords do not match.");
             }
             else{
-                WriteLine("\nPasswords match!");
+                WriteLine("\nPasswords match.");
             }
         }
     }
