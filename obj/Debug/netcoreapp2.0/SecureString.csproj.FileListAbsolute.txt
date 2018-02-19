@@ -1,0 +1,10 @@
+/home/hackerexecute/Projects/SecureString/bin/Debug/netcoreapp2.0/SecureString.deps.json
+/home/hackerexecute/Projects/SecureString/bin/Debug/netcoreapp2.0/SecureString.runtimeconfig.json
+/home/hackerexecute/Projects/SecureString/bin/Debug/netcoreapp2.0/SecureString.runtimeconfig.dev.json
+/home/hackerexecute/Projects/SecureString/bin/Debug/netcoreapp2.0/SecureString.dll
+/home/hackerexecute/Projects/SecureString/bin/Debug/netcoreapp2.0/SecureString.pdb
+/home/hackerexecute/Projects/SecureString/obj/Debug/netcoreapp2.0/SecureString.csproj.CoreCompileInputs.cache
+/home/hackerexecute/Projects/SecureString/obj/Debug/netcoreapp2.0/SecureString.AssemblyInfoInputs.cache
+/home/hackerexecute/Projects/SecureString/obj/Debug/netcoreapp2.0/SecureString.AssemblyInfo.cs
+/home/hackerexecute/Projects/SecureString/obj/Debug/netcoreapp2.0/SecureString.dll
+/home/hackerexecute/Projects/SecureString/obj/Debug/netcoreapp2.0/SecureString.pdb
