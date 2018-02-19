@@ -70,7 +70,7 @@ namespace SecureStringProgram
 
                 CheckPasswords(pwd, pwd2);                  // Compare both SecureStrings
             }
-            catch (Win32Exception e){
+            catch (Exception e){
                 WriteLine(e.Message);
             }
             finally{
