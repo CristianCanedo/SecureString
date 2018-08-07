@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using static System.Console;
 using System.Security;
 
@@ -20,22 +20,29 @@ namespace SecureStringProgram
                 while(true)
                 {
                     cki = Console.ReadKey(true);
-
-                    if (cki.Key == ConsoleKey.Enter){       // If user hits enter, jump out of the loop
+                    
+                    // If user hits enter, jump out of the loop
+                    if (cki.Key == ConsoleKey.Enter)
+                    {
                         break;
                     }
-
-                    if (cki.Key == ConsoleKey.Backspace){
-                        if (pwd.Length == 0){               // If user hits backspace while there is no entry, do nothing
+                    
+                    // If user hits backspace while there is no entry, do nothing
+                    if (cki.Key == ConsoleKey.Backspace)
+                    {
+                        if (pwd.Length == 0)
+                        {
                             continue;
                         }
-                        else if (pwd.Length > 0){           // If user hits backspace, overwrite console output
+                        else if (pwd.Length > 0)
+                        {                                   // If user hits backspace, overwrite console output
                             pwd.RemoveAt(pwd.Length-1);     // and remove from SecureString
                             Console.Write("\b \b");
                             continue;
                         }
                     }
-                    else{
+                    else
+                    {
                         pwd.AppendChar(cki.KeyChar);        // Add user input to SecureString
                         Write("*");
                     }
@@ -47,21 +54,26 @@ namespace SecureStringProgram
                 {
                     cki = Console.ReadKey(true);
 
-                    if (cki.Key == ConsoleKey.Enter){
+                    if (cki.Key == ConsoleKey.Enter)
+                    {
                         break;
                     }
 
-                    if (cki.Key == ConsoleKey.Backspace){
-                        if (pwd.Length == 0){
+                    if (cki.Key == ConsoleKey.Backspace)
+                    {
+                        if (pwd.Length == 0)
+                        {
                             continue;
                         }
-                        else if (pwd.Length > 0){
+                        else if (pwd.Length > 0)
+                        {
                             pwd.RemoveAt(pwd.Length-1);
                             Console.Write("\b \b");
                             continue;
                         }
                     }
-                    else{
+                    else
+                    {
                         pwd.AppendChar(cki.KeyChar);
                         Write("*");
                     }
@@ -69,30 +81,35 @@ namespace SecureStringProgram
 
                 CheckPasswords(pwd, pwd2);                  // Compare both SecureStrings
             }
-            catch (Exception e){
+            catch (Exception e)
+            {
                 WriteLine(e.Message);
             }
-            finally{
+            finally
+            {
                 pwd.Dispose();
                 pwd2.Dispose();
             }
         }
 
-        static void CheckPasswords(SecureString s1, SecureString s2){
-
-            if (s1.Length <= 0 && s2.Length <= 0){
+        static void CheckPasswords(SecureString s1, SecureString s2)
+        {
+            if (s1.Length <= 0 && s2.Length <= 0)
+            {
                 WriteLine("\nNo passwords entered.");
             }
             
             int s1Hash = s1.GetHashCode();
             int s2Hash = s2.GetHashCode();
 
-            if (s1Hash != s2Hash){
+            if (s1Hash != s2Hash)
+            {
                 WriteLine("\nPasswords do not match.");
             }
-            else{
+            else
+            {
                 WriteLine("\nPasswords match.");
             }
         }
-    }
-}
+    } // class
+} // namespace
